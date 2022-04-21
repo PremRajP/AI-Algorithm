@@ -1,0 +1,32 @@
+import java.util.*;
+public class hillclimbing{
+    public static void main(String[] args){
+        int n,i,j;
+        Scanner sc =new Scanner(System.in);
+        System.out.println("Enter number of nodes");
+        n=sc.nextInt();
+        
+        int[][] graph = new int[n][n];
+            for(i=0;i<n;i++)
+            for(j=0;j<n;j++)
+            graph[i][j]=0;
+            
+            for(i=0;i<n;i++)
+            {
+                for(j=0;j<n;j++)
+                {
+                    System.out.println("Is "+i+"is connected to "+j);
+                    graph[i][j]=sc.nextInt();
+                }
+            }
+            System.out.println("The adjancey matrix is");
+            for(i=0;i<n;i++)
+            {
+               for(j=0;j<n;j++)
+               {
+                   System.out.println(graph[i][j]+"\t");
+               }
+               System.out.println();
+            }
+}
+}
